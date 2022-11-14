@@ -1,0 +1,136 @@
+body {
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+  --White: hsl(255, 100%, 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--LightGrayishBlue);
+  font-family: "Manrope", sans-serif;
+}
+img {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  width: 325px;
+  height: 510px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 1px 2px 40px var(--GrayishBlue);
+  background-color: var(--White);
+}
+.img_wrapper {
+  width: 330px;
+  height: 200px;
+  overflow: hidden;
+}
+.text {
+  margin: 36px 35px 10px;
+}
+.title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--VeryDarkGrayishBlue);
+}
+.paragraph {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--GrayishBlue);
+}
+.footer {
+  margin-top: 35px;
+  display: flex;
+  position: relative;
+}
+.footer-img-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.info {
+  margin-left: 50px;
+}
+.info h2,
+p {
+  font-size: 13px;
+  line-height: 20px;
+}
+.info p {
+  margin: 0;
+  color: var(--GrayishBlue);
+}
+.info h2 {
+  margin: 0;
+  color: var(--VeryDarkGrayishBlue);
+}
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  z-index: 99;
+  background-image: url(./images/icon-share.svg);
+}
+.share-open {
+  padding: 10px 0 10px 20px;
+  position: absolute;
+  width: 150%;
+  height: 50px;
+  left: -35px;
+  bottom: -87px;
+  display: flex;
+  align-items: center;
+  color: var(--White);
+  letter-spacing: 5px;
+  transition: all 0.4s;
+  background-color: var(--VeryDarkGrayishBlue);
+}
+.share-open-icons {
+  display: flex;
+  margin-left: 10px;
+}
+.share-open-icons img {
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+}
+
+.footer:hover .share-open {
+  bottom: -15px;
+}
+
+@media (min-width: 750px) {
+  .wrapper {
+    width: 730px;
+    height: 280px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+  }
+  .img_wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .img_wrapper img {
+    width: initial;
+    height: 100%;
+  }
+  .share-open {
+    display: none;
+  }
+}
